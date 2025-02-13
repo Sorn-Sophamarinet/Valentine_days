@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #ff4d6d;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: none;
+    animation: popUp 0.5s ease-out;
+}
+
+@keyframes popUp {
+    0% { transform: scale(0); }
+    80% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #ff3355;
+    transform: scale(1.05);
+}
+
+#message {
+    margin-top: 20px;
+    display: none;
+}
+
+#yesBtn {
+    background-color: #4CAF50;
+}
+
+#noBtn {
+    background-color: #f44336;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p, button {
+        font-size: 14px;
+    }
+}
